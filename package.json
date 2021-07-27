@@ -1,0 +1,67 @@
+{
+	"name": "spike-graphql-linter",
+	"version": "1.0.0",
+	"description": "spike for graphql linter and precommit hook",
+	"scripts": {
+		"graphql-schema-linter": "graphql-schema-linter",
+		"prettier": "prettier --write . ",
+		"test": "mocha tests/test*.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/oOhyeahh/spike-graphql-linter.git"
+	},
+	"keywords": [
+		"graphql-schema-linter"
+	],
+	"author": "Oliver Ye",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/oOhyeahh/spike-graphql-linter/issues"
+	},
+	"homepage": "https://github.com/oOhyeahh/spike-graphql-linter#readme",
+	"dependencies": {
+		"change-case": "^4.1.1",
+		"graphql": "^15.1.0",
+		"graphql-schema-linter": "^0.5.0"
+	},
+	"graphql-schema-linter": {
+		"rules": [
+			"arguments-have-descriptions",
+			"core-mutation-input-is-valid",
+			"core-mutation-result-is-valid",
+			"defined-types-are-used",
+			"deprecations-have-a-reason",
+			"descriptions-are-capitalized",
+			"enum-values-all-caps",
+			"field-names-are-valid",
+			"input-object-fields-sorted-alphabetically",
+			"input-object-values-are-camel-cased",
+			"input-object-values-have-descriptions",
+			"mutation-input-is-valid",
+			"non-core-mutation-input-is-valid",
+			"non-core-mutation-result-is-valid",
+			"type-fields-sorted-alphabetically",
+			"types-are-valid",
+			"types-have-descriptions"
+		],
+		"schemaPaths": [
+			"graphql_api/**/*.graphql"
+		],
+		"customRulePaths": [
+			"graphql-schema-linter-rules/*.js"
+		]
+	},
+	"prettier": {
+		"trailingComma": "es5",
+		"tabWidth": 4,
+		"useTabs": true,
+		"semi": false,
+		"singleQuote": true
+	},
+	"devDependencies": {
+		"chai": "^4.2.0",
+		"mocha": "^8.2.0",
+		"prettier": "^2.1.2"
+	}
+}
