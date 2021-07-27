@@ -2,7 +2,6 @@
   name: spike-graphql-linter-schema
   entry: graphql-schema-linter
   language: node
-  'types': [text]
   args: []
-  require_serial: false
-  additional_dependencies: []  
+  additional_dependencies: 
+    - graphql-schema-linter@2.0.1
