@@ -45,9 +45,6 @@
 			"types-are-valid",
 			"types-have-descriptions"
 		],
-		"schemaPaths": [
-			"graphql_api/**/*.graphql"
-		],
 		"customRulePaths": [
 			"graphql-schema-linter-rules/*.js"
 		]
