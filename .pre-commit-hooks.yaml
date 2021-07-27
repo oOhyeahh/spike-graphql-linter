@@ -1,4 +1,4 @@
 - id: spike-graphql-linter-schema
   name: spike-graphql-linter-schema
-  entry: npm run graphql-schema-linterr
+  entry: npm run graphql-schema-linter
   language: node
