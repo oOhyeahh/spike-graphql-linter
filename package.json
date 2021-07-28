@@ -3,7 +3,7 @@
 	"version": "1.4.0",
 	"description": "spike for graphql linter and precommit hook",
 	"scripts": {
-		"graphql-schema-linter": "graphql-schema-linter",
+		"graphql-linter": "graphql-schema-linter",
 		"prettier": "prettier --write . ",
 		"test": "mocha tests/test*.js",
 		"prepare": "rm -rf lib/* && babel ./src --ignore tests --out-dir ./lib"

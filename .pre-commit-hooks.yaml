@@ -1,6 +1,6 @@
 - id: spike-graphql-linter-schema
   name: spike-graphql-linter-schema
-  entry: spike-graphql-linter-schema
+  entry: graphql-linter
   language: node
   args: []
   files: .*(\.graphql)$
