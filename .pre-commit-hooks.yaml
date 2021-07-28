@@ -1,8 +1,15 @@
-- id: spike-graphql-linter-schema
+- id: graphql-linter
   name: spike-graphql-linter-schema
   entry: graphql-linter
   language: node
   args: []
   files: .*(\.graphql)$
+  pass_filenames: false
   additional_dependencies:
-      - graphql-schema-linter@2.0.1
+    - graphql-schema-linter
+    - commander
+    - chalk
+    - columnify
+    - cosmiconfig
+    - glob
+    - graphql

@@ -10,7 +10,7 @@
 	},
 	"main": "src/index.js",
 	"bin": {
-		"spike-graphql-linter": "src/cli.js"
+		"graphql-linter": "src/cli.js"
 	},
 	"pkg": {
 		"scripts": "lib/**/*.js"
