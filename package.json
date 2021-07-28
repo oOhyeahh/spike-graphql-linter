@@ -7,8 +7,9 @@
 		"prettier": "prettier --write . ",
 		"test": "mocha tests/test*.js"
 	},
+	"main": "src/index.js",
 	"bin": {
-		"graphql-schema-linter": "lib/cli.js"
+		"spike-graphql-linter": "src/cli.js"
 	},
 	"repository": {
 		"type": "git",
