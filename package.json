@@ -6,11 +6,14 @@
 		"graphql-schema-linter": "graphql-schema-linter",
 		"prettier": "prettier --write . ",
 		"test": "mocha tests/test*.js",
-		"prepare": "rm -rf lib/* && babel ./src --ignore test --out-dir ./lib"
+		"prepare": "rm -rf lib/* && babel ./src --ignore tests --out-dir ./lib"
 	},
 	"main": "src/index.js",
 	"bin": {
 		"spike-graphql-linter": "src/cli.js"
+	},
+	"pkg": {
+		"scripts": "lib/**/*.js"
 	},
 	"repository": {
 		"type": "git",

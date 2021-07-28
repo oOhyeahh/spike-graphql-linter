@@ -10,6 +10,7 @@ const {
 } = require('graphql-schema-linter/lib/options.js')
 const figures = require('graphql-schema-linter/lib/figures')
 const chalk = require('chalk')
+const path = require('path')
 
 async function run(stdout, stdin, stderr, argv) {
 	const commander = new Command()
@@ -74,16 +75,10 @@ async function run(stdout, stdin, stderr, argv) {
 		)
 	}
 
-	// TODO Get configs from .graphqlconfig file
-
 	const optionsFromCommandLine = getOptionsFromCommander(commander)
 	const optionsFromConfig = loadOptionsFromConfigDir(
 		optionsFromCommandLine.configDirectory
 	)
-
-	// set customRulePath to package itself
-	optionsFromConfig['customRulePaths'] =
-		'node_modules/spike-graphql-linter/lib/graphql-schema-linter-rules/*.js'
 
 	const options = { ...optionsFromConfig, ...optionsFromCommandLine }
 
@@ -94,7 +89,16 @@ async function run(stdout, stdin, stderr, argv) {
 		return 2
 	}
 
-	const configuration = new Configuration(schema, options)
+	let configuration = new Configuration(schema, options)
+	
+	// set the custom rule path to package itself
+	const customRulePath = path.resolve(
+		'./',
+		'node_modules/spike-graphql-linter/lib/graphql-schema-linter-rules/*.js'
+	)
+	let builtinRulePath = configuration['builtInRulePaths']
+
+	configuration['rulePaths'] = [builtinRulePath, customRulePath]
 
 	const issues = configuration.validate()
 
