@@ -5,7 +5,8 @@
 	"scripts": {
 		"graphql-schema-linter": "graphql-schema-linter",
 		"prettier": "prettier --write . ",
-		"test": "mocha tests/test*.js"
+		"test": "mocha tests/test*.js",
+		"prepare": "rm -rf lib/* && babel ./src --ignore test --out-dir ./lib"
 	},
 	"main": "src/index.js",
 	"bin": {
@@ -29,6 +30,18 @@
 		"graphql": "^15.1.0",
 		"graphql-schema-linter": "^2.0.1"
 	},
+	"babel": {
+		"presets": [
+		  [
+			"@babel/preset-env",
+			{
+			  "targets": {
+				"node": "12.18.3"
+			  }
+			}
+		  ]
+		]
+	},
 	"prettier": {
 		"trailingComma": "es5",
 		"tabWidth": 4,
@@ -37,8 +50,12 @@
 		"singleQuote": true
 	},
 	"devDependencies": {
+		"@babel/cli": "^7.8.4",
+		"@babel/core": "^7.9.0",
+		"@babel/preset-env": "^7.9.5",
+		"@babel/register": "^7.9.0",
+		"mocha": "8.2.1",
 		"chai": "^4.2.0",
-		"mocha": "^8.2.0",
-		"prettier": "^2.1.2"
+		"prettier": "2.2.1"
 	}
 }

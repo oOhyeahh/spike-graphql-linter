@@ -1,6 +1,6 @@
 const {
 	FieldNamesAreValid,
-} = require('../graphql-schema-linter-rules/field-names-are-valid')
+} = require('../src/graphql-schema-linter-rules/field-names-are-valid')
 const { expectFailsRule, expectPassesRule } = require('./assertions')
 
 describe('FieldNamesAreValid rule', () => {

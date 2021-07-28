@@ -83,7 +83,7 @@ async function run(stdout, stdin, stderr, argv) {
 
 	// set customRulePath to package itself
 	optionsFromConfig['customRulePaths'] =
-		'node_modules/spike-graphql-linter/graphql-schema-linter-rules/*.js'
+		'node_modules/spike-graphql-linter/lib/graphql-schema-linter-rules/*.js'
 
 	const options = { ...optionsFromConfig, ...optionsFromCommandLine }
 

@@ -1,6 +1,6 @@
 const {
 	NonCoreMutationResultIsValid,
-} = require('../graphql-schema-linter-rules/non-core-mutation-result-is-valid')
+} = require('../src/graphql-schema-linter-rules/non-core-mutation-result-is-valid')
 const { expectFailsRule, expectPassesRule } = require('./assertions')
 
 describe('NonCoreMutationResultIsValid rule', () => {
