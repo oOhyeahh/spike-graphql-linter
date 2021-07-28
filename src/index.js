@@ -1,1 +1,1 @@
-console.log("index")
+module.exports.runner = require('./runner.js')

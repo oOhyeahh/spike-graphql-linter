@@ -29,30 +29,6 @@
 		"graphql": "^15.1.0",
 		"graphql-schema-linter": "^2.0.1"
 	},
-	"graphql-schema-linter": {
-		"rules": [
-			"arguments-have-descriptions",
-			"core-mutation-input-is-valid",
-			"core-mutation-result-is-valid",
-			"defined-types-are-used",
-			"deprecations-have-a-reason",
-			"descriptions-are-capitalized",
-			"enum-values-all-caps",
-			"field-names-are-valid",
-			"input-object-fields-sorted-alphabetically",
-			"input-object-values-are-camel-cased",
-			"input-object-values-have-descriptions",
-			"mutation-input-is-valid",
-			"non-core-mutation-input-is-valid",
-			"non-core-mutation-result-is-valid",
-			"type-fields-sorted-alphabetically",
-			"types-are-valid",
-			"types-have-descriptions"
-		],
-		"customRulePaths": [
-			"graphql-schema-linter-rules/*.js"
-		]
-	},
 	"prettier": {
 		"trailingComma": "es5",
 		"tabWidth": 4,

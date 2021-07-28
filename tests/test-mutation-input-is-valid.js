@@ -1,4 +1,6 @@
-const { MutationInputIsValid } = require('../mutation-input-is-valid')
+const {
+	MutationInputIsValid,
+} = require('../graphql-schema-linter-rules/mutation-input-is-valid')
 const { expectFailsRule, expectPassesRule } = require('./assertions')
 
 describe('MutationInputIsValid rule', () => {

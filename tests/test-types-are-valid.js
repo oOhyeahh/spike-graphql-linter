@@ -1,6 +1,10 @@
-const { typeNameRegex } = require('../types-are-valid')
+const {
+	typeNameRegex,
+} = require('../graphql-schema-linter-rules/types-are-valid')
 
-const { regexTypeCheck } = require('../generic-regex-check')
+const {
+	regexTypeCheck,
+} = require('../graphql-schema-linter-rules/generic-regex-check')
 
 const {
 	ValidationError,

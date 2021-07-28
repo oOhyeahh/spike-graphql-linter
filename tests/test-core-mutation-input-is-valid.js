@@ -1,4 +1,6 @@
-const { CoreMutationInputIsValid } = require('../core-mutation-input-is-valid')
+const {
+	CoreMutationInputIsValid,
+} = require('../graphql-schema-linter-rules/core-mutation-input-is-valid')
 const { expectFailsRule, expectPassesRule } = require('./assertions')
 
 describe('CoreMutationInputIsValid rule', () => {
